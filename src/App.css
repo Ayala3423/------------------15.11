@@ -1,0 +1,252 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gameTitle {
+  color: #141e26;
+  margin: 0.1em;
+  margin-bottom: 0.3em;
+  font-size: 5em;
+  text-shadow: 1px 1px 4px white;
+  font-family: Fantasy, sans-serif;
+  letter-spacing: 15px;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.login-page,
+.screen {
+  max-width: 360px;
+  padding: 4% 0 0;
+  margin: auto;
+}
+
+.form,
+.playDiv {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  opacity: 90%;
+  width: 15em;
+  height: 25em;
+  margin: 0 20px 100px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10%;
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 1em 0 35px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  opacity: 100%;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  opacity: 100%;
+}
+
+.registration-button button {
+  margin: 1.2em;
+}
+
+button {
+  background: #060606;
+  margin: 0.7em;
+  animation: textColor 30s ease infinite;
+}
+
+.addUserButton,
+.removeUserButton {
+  border-radius: 50%;
+}
+
+@keyframes textColor {
+  0% {
+    color: #23a6d5;
+  }
+
+  25% {
+    color: #e73c7e;
+  }
+
+  50% {
+    color: #ee7752;
+  }
+
+  75% {
+    color: #23d5ab;
+  }
+
+  100% {
+    color: #23a6d5;
+  }
+}
+
+button:hover,
+button:active,
+button:focus {
+  background: #000000;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #929191;
+  font-size: 12px;
+}
+
+.form .message a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.form .register-form {
+  display: none;
+}
+
+.player-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.player-board .registration-form {
+  width: 100%;
+  max-width: 300px;
+  background: #FFFFFF;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.player-board.registration-single .registration-form:first-child {
+  margin: 0 auto;
+}
+
+.player-board.registration-multiple .registration-form:first-child {
+  margin-left: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.victoryGif {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: auto;
+  animation: slideDown 3s ease-in-out forwards;
+  z-index: 10;
+}
+
+@keyframes slideDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+/* Style for Leading Players Panel */
+.leading-players-panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  max-width: 90%;
+  transition: transform 0.3s ease;
+}
+
+.leading-players-panel:hover {
+  transform: translateY(-5px);
+}
+
+.leading-players-panel h2 {
+  font-size: 1.5em;
+  color: #141e26;
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  border-bottom: 2px solid #23a6d5;
+}
+
+.leading-players-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+}
+
+.leading-players-panel li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  padding: 0.5em 0;
+  color: #333;
+}
+
+.leading-players-panel li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
